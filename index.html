@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#092349">
+<meta name="description" content="Exploración ocupacional PROYECTA. Versión de prueba: IAMI-R y DTDC con resultados descriptivos locales.">
+<title>PROYECTA · Estaciones de exploración</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<header class="header"><img src="banner.jpg" alt="PROYECTA: Expedición de posibilidades. Cóndor andino con paisaje y logos institucionales"></header>
+<main class="container">
+  <section id="landing" class="screen">
+    <p class="eyebrow">PROYECTA · Expedición de posibilidades</p>
+    <h1>Estaciones de exploración ocupacional</h1>
+    <p class="lead">Dos cuestionarios para reflexionar sobre la confianza en tus capacidades y las dificultades que puedes encontrar al decidir. <strong>No hay notas, diagnósticos ni respuestas correctas.</strong></p>
+    <div class="warning"><strong>Versión piloto para revisión interna.</strong> Antes de su aplicación pública, verificar autorización de reproducción de los cuestionarios, condiciones de aplicación por orientación escolar y autorizaciones aplicables a menores.</div>
+    <div class="cards">
+      <article class="card"><div class="num">02</div><h2>¿Qué tan capaz me siento?</h2><p><strong>IAMI-R</strong> · 48 afirmaciones · Respuestas de 1 a 10.</p><p>Explora la confianza que percibes para realizar diferentes actividades.</p><button type="button" class="primary" data-start="iami">Comenzar IAMI-R</button></article>
+      <article class="card"><div class="num">03</div><h2>¿Qué dificulta mis decisiones?</h2><p><strong>DTDC</strong> · 27 afirmaciones · Respuestas de 1 a 7.</p><p>Explora situaciones con las que te identificas al pensar en tu futuro.</p><button type="button" class="primary" data-start="dtdc">Comenzar DTDC</button></article>
+    </div>
+    <section class="info"><h2>Cómo funciona</h2><p>Las respuestas se procesan <strong>únicamente en este navegador</strong>. No se envían automáticamente a PROYECTA, al colegio, a una base de datos ni a Google Sheets. Cuando termines, podrás imprimir el informe o guardarlo como PDF. Si recargas la página, perderás las respuestas.</p><p>El informe es descriptivo: una puntuación no decide qué estudiarás, no indica tu inteligencia y no clasifica a los estudiantes.</p></section>
+  </section>
+  <section id="quiz" class="screen hidden" aria-live="polite">
+    <p class="eyebrow" id="quiz-type">ESTACIÓN</p>
+    <h1 id="quiz-title"></h1>
+    <p id="quiz-intro" class="lead"></p>
+    <div class="progress-row"><span id="quiz-progress-text"></span><div class="progress"><div id="quiz-progress-bar"></div></div></div>
+    <form id="quiz-form" novalidate><div id="questions"></div></form>
+    <p class="validation hidden" id="quiz-error" role="alert">Responde todas las preguntas de este grupo antes de continuar.</p>
+    <nav class="actions"><button type="button" id="back-button" class="secondary">Anterior</button><button type="button" id="next-button" class="primary">Siguiente</button></nav>
+    <button type="button" id="exit-button" class="text-button">Volver al inicio (sin guardar)</button>
+  </section>
+  <section id="results" class="screen hidden" aria-live="polite">
+    <div id="report" class="report">
+      <p class="eyebrow">PROYECTA · Expedición de posibilidades</p>
+      <h1 id="result-title"></h1>
+      <p id="result-version" class="muted"></p>
+      <div class="fields"><label>Nombre (opcional, solo para tu impresión)<input type="text" id="student-name" maxlength="90" placeholder="Nombre del estudiante" autocomplete="off"></label><label>Código (opcional)<input type="text" id="student-code" maxlength="30" placeholder="Código PROYECTA" autocomplete="off"></label></div>
+      <p id="report-date"></p>
+      <h2>Resultados descriptivos por dimensión</h2>
+      <div id="result-bars"></div>
+      <p class="report-note" id="result-note"></p>
+      <p class="report-source" id="result-source"></p>
+      <p class="report-disclaimer"><strong>Interpretación:</strong> resultados descriptivos de autoevaluación, sin puntos de corte ni diagnósticos. Para una devolución formal, consulta al profesional de orientación escolar. No hay una «nota global de vocación».</p>
+    </div>
+    <div class="actions no-print"><button type="button" id="print-button" class="primary">Imprimir / Guardar como PDF</button><button type="button" id="restart-button" class="secondary">Volver al inicio</button></div>
+    <p class="muted small no-print">Al pulsar el botón, en el cuadro de impresión puedes elegir «Guardar como PDF». Los datos no se envían a ningún servidor.</p>
+  </section>
+</main>
+<footer class="footer">PROYECTA · Orientación ocupacional intercultural · Uso educativo bajo revisión institucional</footer>
+<script src="instrumentos.js"></script>
+<script src="aplicacion.js"></script>
+</body>
+</html>
