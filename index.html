@@ -26,7 +26,7 @@
     <p class="eyebrow" id="quiz-type">ESTACIÓN</p>
     <h1 id="quiz-title"></h1>
     <p id="quiz-intro" class="lead"></p>
-    <div class="progress-row"><span id="quiz-progress-text"></span><div class="progress"><div id="quiz-progress-bar"></div></div></div>
+    <div class="progress-head"><strong id="quiz-progress-text"></strong><strong id="quiz-percent">0% completado</strong></div><div class="progress"><div id="quiz-progress-bar"></div></div><p class="progress-sub" id="quiz-encouragement" aria-live="polite">Cada respuesta es una oportunidad para conocerte.</p><div class="step-note" id="quiz-step-note"></div>
     <form id="quiz-form" novalidate><div id="questions"></div></form>
     <p class="validation hidden" id="quiz-error" role="alert">Responde todas las preguntas de este grupo antes de continuar.</p>
     <nav class="actions"><button type="button" id="back-button" class="secondary">Anterior</button><button type="button" id="next-button" class="primary">Siguiente</button></nav>
@@ -39,14 +39,28 @@
       <p id="result-version" class="muted"></p>
       <div class="fields"><label>Nombre (opcional, solo para tu impresión)<input type="text" id="student-name" maxlength="90" placeholder="Nombre del estudiante" autocomplete="off"></label><label>Código (opcional)<input type="text" id="student-code" maxlength="30" placeholder="Código PROYECTA" autocomplete="off"></label></div>
       <p id="report-date"></p>
-      <h2>Resultados descriptivos por dimensión</h2>
+      <div class="hero-result">
+        <p class="eyebrow" id="result-kind">MI PERFIL DE EXPLORACIÓN</p>
+        <h2 id="result-headline">Lo que cuentan tus respuestas</h2>
+        <p id="result-summary"></p>
+      </div>
+      <div id="result-insights" class="insights"></div>
+      <h2 id="chart-title">Tu mapa de resultados por dimensión</h2>
+      <p id="chart-caption" class="muted small"></p>
       <div id="result-bars"></div>
+      <div class="next-mission" id="next-mission">
+        <p class="eyebrow">CONTINÚA TU EXPEDICIÓN</p>
+        <h2>Mi próximo paso</h2>
+        <p id="next-text"></p>
+        <h3>Preguntas para reflexionar</h3>
+        <ul id="reflect-questions"></ul>
+      </div>
       <p class="report-note" id="result-note"></p>
       <p class="report-source" id="result-source"></p>
-      <p class="report-disclaimer"><strong>Interpretación:</strong> resultados descriptivos de autoevaluación, sin puntos de corte ni diagnósticos. Para una devolución formal, consulta al profesional de orientación escolar. No hay una «nota global de vocación».</p>
+      <p class="report-disclaimer"><strong>Importante:</strong> estos resultados describen tus respuestas actuales; no tienen puntos de corte clínicos, no diagnostican ni determinan tus ocupaciones. Pueden cambiar con nuevas experiencias. Para una devolución profesional, consulta con orientación escolar. No hay una «nota global de vocación».</p>
     </div>
     <div class="actions no-print"><button type="button" id="print-button" class="primary">Imprimir / Guardar como PDF</button><button type="button" id="restart-button" class="secondary">Volver al inicio</button></div>
-    <p class="muted small no-print">Al pulsar el botón, en el cuadro de impresión puedes elegir «Guardar como PDF». Los datos no se envían a ningún servidor.</p>
+    <p class="muted small no-print">Para obtener el archivo, en el cuadro de impresión elige «Guardar como PDF». El informe puede ocupar dos páginas y se genera solo en tu dispositivo. Ninguna respuesta se envía a un servidor.</p>
   </section>
 </main>
 <footer class="footer">PROYECTA · Orientación ocupacional intercultural · Uso educativo bajo revisión institucional</footer>

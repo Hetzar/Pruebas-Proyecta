@@ -40,3 +40,12 @@ Fuentes: https://docs.github.com/es/pages/getting-started-with-github-pages/conf
 `index.html`: diseño; `instrumentos.js`: preguntas provenientes de los PDFs aportados; `aplicacion.js`: lógica y promedios; `estilo.css`: pantalla e impresión; `banner.jpg`: identidad gráfica proporcionada para PROYECTA.
 
 **Advertencia metodológica:** se obtienen resultados **descriptivos del prototipo**, no informes psicométricos validados para población colombiana. No mezclar, comparar ni sumar DTDC e IAMI-R en una calificación única. No usar estas puntuaciones para asignar «clanes» ni restringir opciones educativas.
+
+
+## Versión 2: interpretación reflexiva
+
+Añade para cada prueba un resumen personalizado, ámbitos destacados relativamente según respuestas, sugerencias educativas y preguntas de reflexión. Los resultados son descriptivos; no se crean puntos de corte o diagnósticos. La DTDC mantiene las ocho agrupaciones de su anexo inicial de 27 ítems, que no equivalen a los seis factores posteriores, y **no debe utilizarse para análisis psicométrico de la maestría sin acordar instrumento y protocolo con profesional competente**.
+
+Actualización del repositorio: subir `index.html`, `aplicacion.js`, `estilo.css` y `README.md` sustituyendo los anteriores. `instrumentos.js` y `banner.jpg` permanecen sin cambios. Si se está publicando por primera vez, cargar todo el contenido de esta carpeta.
+
+**IMPORTANTE:** verificar licencia de reproducción y condiciones de aplicación antes de uso público con estudiantes. Este sitio no recoge consentimiento ni envía datos. No se almacena información del estudiante en servidor o navegador tras salir o actualizar.
