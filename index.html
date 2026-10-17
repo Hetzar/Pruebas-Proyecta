@@ -3,10 +3,51 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="revision" content="2.1 - progresion y tarjetas corregidas">
 <meta name="theme-color" content="#092349">
 <meta name="description" content="Exploración ocupacional PROYECTA. Versión de prueba: IAMI-R y DTDC con resultados descriptivos locales.">
 <title>PROYECTA · Estaciones de exploración</title>
-<link rel="stylesheet" href="estilo.css">
+<style>
+:root{--navy:#082344;--navy2:#122f57;--gold:#daa65d;--ink:#172c4a;--light:#f5f8fc;--line:#dbe4ef;--muted:#576e87}*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#edf2f8,#f7f9fc);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink)}button,input{font:inherit}.header{background:#051a36;border-bottom:4px solid var(--gold)}.header img{display:block;width:100%;height:auto;max-height:170px;object-fit:contain}.container{max-width:980px;margin:0 auto;min-height:80vh;padding:32px 20px 65px}.screen.hidden,.hidden{display:none!important}.eyebrow{font-size:.76rem;letter-spacing:.15em;text-transform:uppercase;color:#8a672e;font-weight:850}.lead{font-size:1.07rem;max-width:780px;color:#3b5067}h1{font-size:clamp(1.65rem,3.3vw,2.45rem);line-height:1.16;color:var(--navy);margin:.2em 0 .55em}h2{font-size:1.15rem;color:var(--navy)}.warning{padding:15px 18px;border-left:4px solid #d99a2a;background:#fff5db;border-radius:8px;max-width:920px;margin:22px 0}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:28px 0}.card,.info{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 8px 28px #09284912;padding:25px}.card .num{font-size:1.7rem;font-weight:900;color:#bc8b46}.card p{color:#44576d}.info{padding:20px 25px}.info h2{margin-top:0}.primary,.secondary{border:1px solid transparent;border-radius:10px;padding:12px 18px;font-weight:700;cursor:pointer}.primary{color:#fff;background:var(--navy2)}.primary:hover{background:#21497e}.secondary{color:#163554;background:#fff;border-color:#93aac5}.secondary:hover{background:#e7eff8}.text-button{border:0;color:#385b7f;background:transparent;padding:12px 0;cursor:pointer;text-decoration:underline}.progress-row{display:flex;align-items:center;gap:16px;margin:24px 0}.progress-row span{font-size:.9rem;font-weight:650;white-space:nowrap}.progress{height:11px;border-radius:20px;background:#dae4ef;flex:1;overflow:hidden}.progress div{background:linear-gradient(90deg,#d0a05b,#efbd6a);height:100%;width:0;transition:width .25s}.question{background:#fff;border:1px solid var(--line);border-radius:13px;margin:14px 0;padding:18px}.question legend{font-weight:660;font-size:1rem;max-width:98%;padding:0 4px}.question legend .qn{font-weight:900;color:#9b6e32}.answers{display:flex;flex-wrap:wrap;gap:6px;padding-top:12px}.choice{cursor:pointer;position:relative}.choice input{position:absolute;opacity:0;width:1px;height:1px}.choice span{display:flex;justify-content:center;align-items:center;min-height:40px;min-width:42px;border:1px solid #abbcd0;border-radius:9px;font-weight:750;background:#f8fbfd}.choice input:focus-visible+span{outline:3px solid #d99a2a;outline-offset:1px}.choice input:checked+span{background:var(--navy2);border-color:var(--navy2);color:white}.scale-legend{display:flex;justify-content:space-between;margin-top:6px;color:var(--muted);font-size:.77rem;gap:14px}.actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end;margin-top:26px}.validation{border-left:4px solid #b42e39;background:#fff0f0;padding:12px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:22px 0}.fields label{font-weight:650;font-size:.84rem}.fields input{display:block;margin-top:8px;width:100%;padding:11px;border:1px solid #bac9da;border-radius:9px}.report{background:#fff;border:1px solid var(--line);padding:28px;border-radius:14px}.report h2{margin-top:27px}.dimension{margin:19px 0}.dimension-line{display:flex;justify-content:space-between;gap:10px;font-weight:670;font-size:.95rem}.meter{height:14px;border-radius:12px;background:#e9eff6;margin:8px 0;overflow:hidden}.meter-fill{height:100%;background:linear-gradient(90deg,#769fc7,#d3a35e)}.dimension small{color:var(--muted)}.muted,.report-source{color:var(--muted)}.small{font-size:.85rem}.report-note,.report-disclaimer{border-radius:9px;padding:12px 14px;background:#f0f5fb;margin-top:25px}.report-source{font-size:.8rem;line-height:1.4;word-break:break-word}.footer{background:#0c294b;color:#e2ebf5;text-align:center;padding:22px;font-size:.82rem}@media(max-width:660px){.cards,.fields{grid-template-columns:1fr}.container{padding:18px 13px 46px}.card,.info,.report{padding:17px}.header img{max-height:110px}.answers{gap:5px}.choice span{min-width:35px;min-height:38px}.scale-legend{font-size:.68rem}.actions>*{flex:1}}@media print{@page{size:A4;margin:14mm}body{background:#fff;font-size:12px;color:#000}.header,.footer,#landing,#quiz,.no-print,.actions{display:none!important}.container{max-width:none;margin:0;padding:0;min-height:0}#results{display:block!important}.report{padding:0;border:0;box-shadow:none}.report h1{font-size:22px}.fields{display:grid;grid-template-columns:1fr 1fr}.fields label{font-size:10px}.fields input{border:0;border-bottom:1px solid #ccc;border-radius:0;padding:1px;font-size:12px}.dimension{break-inside:avoid;margin:9px 0}.meter{height:8px;-webkit-print-color-adjust:exact;print-color-adjust:exact}.meter-fill{-webkit-print-color-adjust:exact;print-color-adjust:exact}.report-note,.report-disclaimer{border:1px solid #ddd;background:#fff;margin:14px 0}.report-source{font-size:9px}}
+
+/* Versión 2: progresión, legibilidad y devolución orientativa */
+.progress-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:20px 0 8px;font-size:.92rem;color:var(--navy2)}.progress{height:13px;background:#dde7f1}.progress div{background:linear-gradient(90deg,#4577a9,#e0ad60)}.progress-sub{margin:10px 0 4px;color:#567088;font-size:.89rem}.step-note{font-size:.78rem;font-weight:750;letter-spacing:.05em;text-transform:uppercase;color:#8b672f;margin:22px 0 12px}
+.question{border-radius:16px;box-shadow:0 3px 13px #0928490b;transition:box-shadow .15s}.question:hover{box-shadow:0 7px 20px #09284917}.question legend{font-weight:740;color:#102b4b}.choice span{border-radius:11px;transition:background .15s,transform .15s,box-shadow .15s}.choice:hover span{background:#e9f1f9;transform:translateY(-1px)}.choice input:checked+span{background:#0e3a68;box-shadow:0 4px 10px #16355440}.question:has(input:checked){border-color:#a6bdd3;background:linear-gradient(90deg,#f8fbff 0%,#fff 24%)}
+.hero-result{margin:20px 0 23px;padding:23px;border:1px solid #bed5e6;border-left:5px solid #c59a59;border-radius:14px;background:linear-gradient(115deg,#f2f7fd,#fffbf3)}.hero-result h2{font-size:1.35rem;margin:7px 0 8px}.hero-result p:last-child{margin:0;line-height:1.55}.insights{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:15px;margin:22px 0}.insight-card{padding:20px 21px;border:1px solid #d5e0ed;border-radius:13px;background:#fafcff}.insight-card.confidence{border-top:4px solid #3f76a6}.insight-card.explore{border-top:4px solid #c69c60;background:#fffcf5}.insight-card.attention{border-top:4px solid #a57947;background:#fffcf5}.insight-card.neutral{border-top:4px solid #7095ab}.insight-card h3{font-size:1.03rem;margin:2px 0 8px;color:#092e54}.insight-intro{font-size:.88rem;color:#4b6076;margin:0 0 13px}.insight-list{padding:0;margin:0;list-style:none;display:grid;gap:14px}.insight-list li{border-top:1px solid #e0e7f0;padding-top:10px;display:grid;gap:4px}.insight-list li strong{font-size:.91rem;color:#14375c}.insight-list li span{font-size:.87rem;color:#50647a;line-height:1.4}.next-mission{margin-top:22px;padding:22px;border:1px solid #cbdbe8;background:#eff5fa;border-radius:14px}.next-mission h2{margin:5px 0 7px}.next-mission h3{font-size:1rem;margin:17px 0 8px}.next-mission ul{margin:0;padding-left:22px}.next-mission li{margin:5px 0}.meter-fill.dtdc-fill{background:linear-gradient(90deg,#638da5,#c89558)}.dimension-line span:last-child{font-variant-numeric:tabular-nums;white-space:nowrap}
+@media(max-width:660px){.progress-head{font-size:.8rem}.hero-result{padding:17px}.insights{grid-template-columns:1fr}.next-mission{padding:17px}}
+@media print{.hero-result,.insight-card,.next-mission{print-color-adjust:exact;-webkit-print-color-adjust:exact}.hero-result{padding:12px 15px;margin:10px 0}.hero-result h2{font-size:16px}.insights{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:13px 0}.insight-card{padding:10px 12px;break-inside:avoid}.insight-card h3{font-size:12px}.insight-intro,.insight-list li span{font-size:10px}.insight-list{gap:5px}.insight-list li{padding-top:5px}.insight-list li strong{font-size:10px}.next-mission{padding:11px 13px;break-inside:avoid}.next-mission h2{font-size:15px}.report h2{margin:14px 0 6px}.dimension{margin:6px 0}.report-note,.report-disclaimer{font-size:10px;padding:8px}.report-source{font-size:8px}.report{font-size:11px}.next-mission li{margin:2px 0}}
+
+
+/* ESTACIONES 2.1 — tarjetas accesibles, tipografía y barra de progreso reparadas */
+.progress-head{display:flex!important;align-items:center;justify-content:space-between!important;gap:18px!important;flex-wrap:wrap;margin:22px 0 10px!important}
+.progress-head strong{font-size:.92rem;color:#153a60}
+#quiz-percent{display:inline-flex;align-items:center;padding:5px 12px;border-radius:999px;background:#e0ebf5;border:1px solid #cad9e8;white-space:nowrap}
+.progress{height:12px;border-radius:50px;overflow:hidden}
+.progress>div{height:100%;background:linear-gradient(90deg,#2676ac,#d5a65f);transition:width .2s ease}
+.progress-sub{font-size:.9rem;margin:10px 0 0}
+.step-note{margin:24px 0 12px;border-bottom:1px solid #d9e5f0;padding-bottom:8px}
+.scale-tip{border-left:3px solid #d5a65f;border-radius:6px;background:#fff8e9;color:#5b5361;padding:10px 13px;margin-bottom:14px;font-size:.88rem}
+.question{min-width:0;display:block;margin:14px 0!important;padding:20px 22px!important;box-shadow:0 5px 16px #0928490a;background:#fff;border:1px solid #d6e0ec;border-radius:15px}
+.question-heading{display:flex;gap:14px;align-items:flex-start;margin:0 0 16px}
+.question-number{display:inline-flex;flex:none;justify-content:center;align-items:center;font-size:.86rem;font-weight:900;color:#154269;min-width:39px;height:34px;border-radius:9px;background:#eaf3fb}
+.question-title{margin:2px 0 0!important;color:#0c2b4a;font-size:1.01rem;font-weight:720;line-height:1.48;overflow-wrap:anywhere}
+.question.answered{border-color:#a8c5db;background:#fff}
+.answers{display:grid!important;grid-template-columns:repeat(10,minmax(0,1fr));gap:9px!important;margin:0!important;padding:0!important}
+.answers[data-max="7"]{grid-template-columns:repeat(7,minmax(0,1fr))}
+.choice{min-width:0;display:block;cursor:pointer}
+.choice span{height:44px;min-height:44px;min-width:0!important;width:100%;border-radius:9px;background:#f7fafd;border:1px solid #aec4db;font-size:.95rem;font-weight:700;color:#1a456c;box-shadow:none;transition:.16s}
+.choice:hover span{background:#e6f2fb;transform:translateY(-1px)}
+.choice input:checked+span{background:#173f70;border-color:#173f70;color:white;box-shadow:0 4px 11px #173f7030}
+.choice input:focus-visible+span{outline:3px solid #d3a153;outline-offset:2px}
+#quiz-title{margin-bottom:14px}#quiz-intro{background:#edf5fc;border:1px solid #d7e6f1;padding:15px 17px;border-radius:12px}
+#quiz .actions{position:sticky;bottom:0;background:linear-gradient(180deg,#f7f9fc0a,#f7f9fce8 25%,#f7f9fc);z-index:5;padding:17px 0 10px}
+#quiz .actions .primary{min-width:220px}
+#quiz .actions button:disabled{opacity:.45;cursor:not-allowed}
+@media(max-width:680px){.question{padding:17px 14px!important}.question-heading{gap:10px}.question-title{font-size:.97rem}.answers{grid-template-columns:repeat(5,minmax(0,1fr));gap:6px!important}.answers[data-max="7"]{grid-template-columns:repeat(7,minmax(0,1fr))}.choice span{height:44px;font-size:.87rem}.progress-head{gap:7px!important}.progress-head strong{font-size:.81rem}.question-number{min-width:33px;height:32px}.scale-tip{font-size:.81rem}}
+@media(max-width:380px){.answers[data-max="7"]{grid-template-columns:repeat(4,minmax(0,1fr))}.choice span{height:43px}.progress-head{align-items:flex-start}}
+@media print{.question,.scale-tip,.progress-head,.step-note{display:none!important}#quiz .actions{display:none!important}}
+
+</style>
 </head>
 <body>
 <header class="header"><img src="banner.jpg" alt="PROYECTA: Expedición de posibilidades. Cóndor andino con paisaje y logos institucionales"></header>
@@ -15,7 +56,7 @@
     <p class="eyebrow">PROYECTA · Expedición de posibilidades</p>
     <h1>Estaciones de exploración ocupacional</h1>
     <p class="lead">Dos cuestionarios para reflexionar sobre la confianza en tus capacidades y las dificultades que puedes encontrar al decidir. <strong>No hay notas, diagnósticos ni respuestas correctas.</strong></p>
-    <div class="warning"><strong>Versión piloto para revisión interna.</strong> Antes de su aplicación pública, verificar autorización de reproducción de los cuestionarios, condiciones de aplicación por orientación escolar y autorizaciones aplicables a menores.</div>
+    <div class="warning"><strong>Versión piloto 2.1 para revisión interna.</strong> Antes de su aplicación pública, verificar autorización de reproducción de los cuestionarios, condiciones de aplicación por orientación escolar y autorizaciones aplicables a menores.</div>
     <div class="cards">
       <article class="card"><div class="num">02</div><h2>¿Qué tan capaz me siento?</h2><p><strong>IAMI-R</strong> · 48 afirmaciones · Respuestas de 1 a 10.</p><p>Explora la confianza que percibes para realizar diferentes actividades.</p><button type="button" class="primary" data-start="iami">Comenzar IAMI-R</button></article>
       <article class="card"><div class="num">03</div><h2>¿Qué dificulta mis decisiones?</h2><p><strong>DTDC</strong> · 27 afirmaciones · Respuestas de 1 a 7.</p><p>Explora situaciones con las que te identificas al pensar en tu futuro.</p><button type="button" class="primary" data-start="dtdc">Comenzar DTDC</button></article>
@@ -64,7 +105,433 @@
   </section>
 </main>
 <footer class="footer">PROYECTA · Orientación ocupacional intercultural · Uso educativo bajo revisión institucional</footer>
-<script src="instrumentos.js"></script>
-<script src="aplicacion.js"></script>
+<script>
+/* Prototipo local: verificar derechos de reproducción antes de publicación pública. */
+const INSTRUMENTOS = {
+  "iami": {
+    "id": "iami",
+    "title": "IAMI-R · Autoeficacia percibida",
+    "short": "IAMI-R",
+    "min": 1,
+    "max": 10,
+    "questions": [
+      "Analizar textos literarios (describiendo los personajes principales de una novela, por ejemplo)",
+      "Reconocer diferentes géneros de escritura (cuento y ensayo, por ejemplo)",
+      "Identificar las ideas principales de un texto",
+      "Escribir una redacción breve sin errores gramaticales",
+      "Escribir de manera coherente y organizada (un informe con introducción, desarrollo y conclusiones, por ejemplo)",
+      "Escribir una redacción breve sin errores ortográficos",
+      "Resolver problemas de la Física",
+      "Obtener notas altas en Matemática",
+      "Resolver problemas geométricos",
+      "Realizar mentalmente operaciones matemáticas",
+      "Resolver ecuaciones matemáticas",
+      "Resolver problemas que requieran cálculos numéricos",
+      "Dibujar con precisión (retratos, por ejemplo)",
+      "Dibujar objetos en tres dimensiones (figuras geométricas, por ejemplo)",
+      "Emplear la perspectiva en el dibujo (representando los objetos tal cual se ven a la distancia)",
+      "Realizar construcciones en tres dimensiones (utilizando papel madera, por ejemplo)",
+      "Armar maquetas o modelos (de aviones, por ejemplo)",
+      "Dibujar planos (de una vivienda, por ejemplo)",
+      "Interpretar un instrumento musical",
+      "Leer música (en una partitura o pentagrama, por ejemplo)",
+      "Componer temas musicales sencillos",
+      "Afinar un instrumento musical",
+      "Interpretar un instrumento en una orquesta o grupo musical",
+      "Realizar variaciones o arreglos de un tema musical",
+      "Percibir rápidamente los sentimientos de otras personas",
+      "Coordinar un grupo (de estudio, por ejemplo)",
+      "Exponer un tema en público (un debate o asamblea, por ejemplo)",
+      "Defender los derechos de otras personas",
+      "Hablar con personas de mayor autoridad (directivos, por ejemplo)",
+      "Iniciar y mantener conversaciones con diferentes personas (nuevos compañeros de curso, por ejemplo)",
+      "Practicar ejercicios que requieran esfuerzo prolongado (ciclismo, por ejemplo)",
+      "Practicar ejercicios que requieran precisión (encestar en un aro, por ejemplo)",
+      "Competir en carreras de velocidad",
+      "Practicar ejercicios que requieran resistencia (natación, por ejemplo)",
+      "Practicar ejercicios que requieran agilidad (esquivar obstáculos, por ejemplo)",
+      "Practicar ejercicios que requieran equilibrio (usando barras o cajones, por ejemplo)",
+      "Conocer tus limitaciones para enfrentar diferentes situaciones",
+      "Describir con precisión tus sentimientos (en un diario íntimo, por ejemplo)",
+      "Identificar rápidamente tus necesidades psicológicas (de compañía, por ejemplo)",
+      "Comprender las causas de tus estados de ánimo",
+      "Conocer tus capacidades para enfrentar diferentes situaciones",
+      "Identificar rápidamente tus sentimientos",
+      "Identificar las diferencias entre animales de un mismo tipo (entre serpientes venenosas e inofensivas, por ejemplo)",
+      "Conocer una gran variedad de vegetales (diferentes tipos de árboles, por ejemplo)",
+      "Usar técnicas para medir la contaminación ambiental (existencia de bacterias en el agua, por ejemplo)",
+      "Hacer experimentos para analizar fenómenos naturales (fotosíntesis, por ejemplo)",
+      "Realizar análisis de materia orgánica (una muestra de tejido, por ejemplo)",
+      "Obtener notas altas en Biología"
+    ],
+    "source": "Pérez, E. R., & Medrano, L. (2007). Inventario de Autoeficacia para Inteligencias Múltiples Revisado: Un estudio de validez de criterio. Avances en Medición, 5, 105–114. Anexo (48 ítems).",
+    "version": "48 ítems, 2007",
+    "note": "Mide confianza percibida para realizar actividades. No evalúa inteligencia, aptitudes reales ni determina ocupaciones.",
+    "groups": [
+      {
+        "name": "Lingüística",
+        "ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "name": "Lógico-matemática",
+        "ids": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      {
+        "name": "Espacial",
+        "ids": [
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ]
+      },
+      {
+        "name": "Musical",
+        "ids": [
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      },
+      {
+        "name": "Interpersonal",
+        "ids": [
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      },
+      {
+        "name": "Cinestésico-corporal",
+        "ids": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36
+        ]
+      },
+      {
+        "name": "Intrapersonal",
+        "ids": [
+          37,
+          38,
+          39,
+          40,
+          41,
+          42
+        ]
+      },
+      {
+        "name": "Naturalista",
+        "ids": [
+          43,
+          44,
+          45,
+          46,
+          47,
+          48
+        ]
+      }
+    ]
+  },
+  "dtdc": {
+    "id": "dtdc",
+    "title": "DTDC · Dificultades al decidir",
+    "short": "DTDC",
+    "min": 1,
+    "max": 7,
+    "questions": [
+      "Sé que tengo que tomar una decisión sobre mi futuro académico-profesional, pero no tengo motivación para hacerlo ahora (no se me apetece).",
+      "Opino que no tengo que escoger ahora mi camino profesional, el tiempo sé que me dirigirá hacia la opción más correcta.",
+      "Normalmente me cuesta tomar decisiones.",
+      "Normalmente siento que necesito la aprobación o el apoyo y ayuda de otros para tomar decisiones.",
+      "Normalmente temo el fracaso.",
+      "No sé qué pasos debo dar.",
+      "No sé qué factores y elementos debo considerar.",
+      "No sé cómo combinar la información que tengo sobre mí mismo con la que poseo sobre los diferentes caminos académico-profesionales.",
+      "No sé qué profesiones me interesan.",
+      "No estoy seguro/a todavía de mis preferencias vocacionales (p. ej., no sé qué tipo de relación quiero tener con la gente en el trabajo, qué ambiente de trabajo prefiero).",
+      "No tengo suficiente información sobre mis competencias (p. ej., sobre mis habilidades numéricas, verbales) y/o sobre mis rasgos de personalidad (iniciativa, paciencia, persistencia...).",
+      "No sé cuáles serán en el futuro mis habilidades y/o rasgos de personalidad.",
+      "No sé cómo obtener información adicional sobre mí mismo (habilidades, rasgos de personalidad...).",
+      "No tengo suficiente información sobre la variedad de profesiones y/o alternativas educativas que existen.",
+      "No tengo suficiente información sobre las características de las profesiones y/o alternativas académicas que me interesan (p. ej., la demanda laboral, ingresos, posibilidades de promoción, requisitos académicos).",
+      "Desconozco qué opciones académicas y profesionales tendrán más salidas laborales en el futuro.",
+      "No sé cómo obtener información precisa y actual sobre las características de profesiones y/o alternativas académicas.",
+      "Cambio constantemente mis preferencias académico-vocacionales (p. ej., algunas veces quiero ser enfermero y otras maestro, algunas estudiar Bachillerato y otras un Ciclo formativo).",
+      "Tengo información contradictoria sobre mis habilidades y/o rasgos de personalidad (p. ej., yo creo que soy paciente con la gente, pero otros creen que no lo soy).",
+      "Tengo información contradictoria sobre las características de profesiones y/o alternativas académicas.",
+      "Me atraen diferentes carreras profesionales y/o alternativas educativas de igual manera, y me cuesta elegir entre ellas.",
+      "Mis preferencias no pueden combinarse en una única opción académica-profesional y yo no quiero abandonar ninguna de ellas.",
+      "Mis destrezas y habilidades no encajan con los requerimientos de la alternativa académica y/o profesional en la que estoy interesado.",
+      "No me gustan ninguna de las profesiones o alternativas académicas en las que me han admitido.",
+      "La profesión o alternativa académica en la que estoy interesado tiene ciertas características que me sobrepasan (p. ej., me interesa Medicina pero no quiero estudiar muchos años; me interesa el Bachillerato Artístico pero quiero empezar a trabajar pronto).",
+      "Las personas que son importantes para mí (como padres o amigos) no están de acuerdo con la opción académico-profesional que estoy considerando o con las características de la profesión que yo deseo.",
+      "Entre las personas que me están recomendando alguna profesión u opción académica y que me dicen qué aspectos deben guiar mi decisión, existen contradicciones."
+    ],
+    "source": "Lozano, S. (2007). Validación de un modelo de medida de las dificultades en los procesos de toma de decisiones sobre la carrera profesional. Revista de Educación, 343, 325–351. Anexo de escala inicial.",
+    "version": "Escala inicial de 27 ítems, 2007",
+    "note": "Muestra identificación con posibles dificultades. No es un diagnóstico ni reproduce automáticamente el modelo factorial validado posterior.",
+    "groups": [
+      {
+        "name": "Motivación",
+        "ids": [
+          1,
+          2
+        ]
+      },
+      {
+        "name": "Indecisión",
+        "ids": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "name": "Información sobre el proceso de decisión",
+        "ids": [
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "name": "Información sobre sí mismo",
+        "ids": [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      },
+      {
+        "name": "Información sobre alternativas",
+        "ids": [
+          14,
+          15,
+          16,
+          17
+        ]
+      },
+      {
+        "name": "Información contradictoria",
+        "ids": [
+          18,
+          19,
+          20
+        ]
+      },
+      {
+        "name": "Conflictos internos",
+        "ids": [
+          21,
+          22,
+          23,
+          24
+        ]
+      },
+      {
+        "name": "Conflictos externos",
+        "ids": [
+          25,
+          26,
+          27
+        ]
+      }
+    ]
+  }
+};
+
+</script>
+<script>
+'use strict';
+// Los datos se mantienen exclusivamente en memoria del navegador: sin red ni almacenamiento local.
+const $=id=>document.getElementById(id);
+const app={type:null,answers:[],page:0,size:6};
+const visible=(id)=>{for(const sec of ['landing','quiz','results'])$(sec).classList.toggle('hidden',sec!==id);window.scrollTo({top:0,behavior:'instant'});};
+function safeText(value){return String(value).replace(/[<>&"']/g,s=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&#39;'}[s]));}
+function start(type){
+  if(!Object.prototype.hasOwnProperty.call(INSTRUMENTOS,type))return;
+  if(app.type && app.answers.some(x=>Number.isInteger(x)) && !confirm('¿Comenzar otra prueba? Las respuestas anteriores desaparecerán.'))return;
+  app.type=type;app.answers=new Array(INSTRUMENTOS[type].questions.length).fill(null);app.page=0;app.size=type==='iami'?6:5;
+  const test=INSTRUMENTOS[type];$('quiz-type').textContent='Estación '+(type==='iami'?'2':'3');$('quiz-title').textContent=test.title;
+  $('quiz-intro').textContent=type==='iami'?'Marca qué tan seguro/a te sientes de poder realizar cada actividad, NO cuánto te gusta. (1 = nada seguro/a; 10 = completamente seguro/a).':'Indica cuánto te identificas con cada situación. (1 = nada identificado/a; 7 = totalmente identificado/a).';
+  renderQuestions();visible('quiz');
+}
+function updateProgress(){
+  const test=INSTRUMENTOS[app.type];
+  const count=app.answers.filter(Number.isInteger).length;
+  const percent=Math.round(100*count/test.questions.length);
+  $('quiz-progress-text').textContent=`${count} de ${test.questions.length} respuestas`;
+  $('quiz-progress-bar').style.width=`${percent}%`;
+  $('quiz-progress-bar').setAttribute('aria-valuenow',String(percent));
+  $('quiz-percent').textContent=`${percent}% completado`;
+  $('quiz-encouragement').textContent=count===test.questions.length?'¡Terminaste todas las preguntas! Ya puedes ver tus resultados.':count>test.questions.length*.75?'¡Ya casi terminas! Cada respuesta cuenta.':count>test.questions.length*.5?'Ya avanzaste más de la mitad de la expedición.':'Cada respuesta es una oportunidad para conocerte.';
+}
+function renderQuestions(){
+  const test=INSTRUMENTOS[app.type];
+  const from=app.page*app.size;
+  const to=Math.min(from+app.size,test.questions.length);
+  updateProgress();
+  $('quiz-step-note').textContent=`ETAPA ${String(app.page+1).padStart(2,'0')} / ${String(Math.ceil(test.questions.length/app.size)).padStart(2,'0')} · Preguntas ${from+1}–${to}`;
+  const form=$('questions');form.replaceChildren();
+  const tip=document.createElement('div'); tip.className='scale-tip';
+  tip.textContent=app.type==='iami'?'Elige un número del 1 (nada seguro/a) al 10 (totalmente seguro/a).':'Elige un número del 1 (nada identificado/a) al 7 (totalmente identificado/a).';
+  form.append(tip);
+  for(let i=from;i<to;i++){
+    const card=document.createElement('section');card.className='question';card.setAttribute('role','group');
+    const qid=`q-title-${i+1}`;card.setAttribute('aria-labelledby',qid);
+    const header=document.createElement('div');header.className='question-heading';
+    const num=document.createElement('span');num.className='question-number';num.textContent=String(i+1).padStart(2,'0');
+    const title=document.createElement('p');title.className='question-title';title.id=qid;title.textContent=test.questions[i];
+    header.append(num,title);card.append(header);
+    const choices=document.createElement('div');choices.className='answers';choices.dataset.max=String(test.max);
+    for(let v=test.min;v<=test.max;v++){
+      const label=document.createElement('label');label.className='choice';label.title=`Respuesta ${v}`;
+      const radio=document.createElement('input');radio.type='radio';radio.name=`pregunta-${i+1}`;radio.value=String(v);radio.checked=app.answers[i]===v;radio.setAttribute('aria-label',`Pregunta ${i+1}: ${v}`);
+      radio.addEventListener('change',()=>{
+        app.answers[i]=v;
+        updateProgress();
+        $('quiz-error').classList.add('hidden');
+        card.classList.add('answered');
+      });
+      const n=document.createElement('span');n.textContent=String(v);label.append(radio,n);choices.append(label);
+    }
+    card.append(choices);
+    if(Number.isInteger(app.answers[i]))card.classList.add('answered');
+    form.append(card);
+  }
+  $('back-button').disabled=app.page===0;
+  $('next-button').textContent=to===test.questions.length?'Ver mis resultados':'Continuar a la siguiente etapa';
+  $('quiz-error').classList.add('hidden');
+}
+function next(){
+ const test=INSTRUMENTOS[app.type];const from=app.page*app.size;const to=Math.min(from+app.size,test.questions.length);
+ if(app.answers.slice(from,to).some(v=>!Number.isInteger(v))){$('quiz-error').classList.remove('hidden');$('questions').querySelectorAll('.question').forEach((el,idx)=>{el.style.borderColor=Number.isInteger(app.answers[from+idx])?'':'#be6070'});return;}
+ if(to===test.questions.length){showResults();return;}
+ app.page++;renderQuestions();window.scrollTo({top:0,behavior:'instant'});
+}
+const ORIENTACIONES = {
+ iami: {
+  'Lingüística': {desc:'Leer, comprender y escribir textos.', next:'Leer sobre una ocupación de tu interés y escribir un resumen breve.'},
+  'Lógico-matemática': {desc:'Resolver problemas, cálculos y situaciones matemáticas.',next:'Probar un reto matemático o investigar qué cálculos utiliza una ocupación.'},
+  'Espacial': {desc:'Representar objetos, dibujos, planos y relaciones espaciales.',next:'Realizar un boceto, un modelo o un pequeño plano.'},
+  'Musical': {desc:'Interpretar, leer o crear música.',next:'Practicar un ritmo o explorar cómo se aprende a crear música.'},
+  'Interpersonal': {desc:'Comunicarse, colaborar y coordinar actividades con otras personas.',next:'Participar en una actividad colaborativa o preparar una conversación de aprendizaje.'},
+  'Cinestésico-corporal': {desc:'Realizar actividades que implican coordinación, movimiento y equilibrio.',next:'Aprender una actividad de coordinación adecuada a tus intereses.'},
+  'Intrapersonal': {desc:'Reconocer las propias emociones, necesidades, posibilidades y limitaciones.',next:'Escribir, de forma privada, qué experiencia te ayudó a conocerte mejor.'},
+  'Naturalista': {desc:'Reconocer el entorno natural y explorar fenómenos biológicos o ambientales.',next:'Investigar un aspecto de la naturaleza presente en tu territorio.'}
+ },
+ dtdc: {
+  'Motivación': {desc:'Identificación con dificultades para iniciar o dar prioridad a la elección.',next:'Elegir una pequeña acción para informarte sobre una opción, sin obligarte a decidir hoy.'},
+  'Indecisión': {desc:'Dudas generales, miedo al error o necesidad de aprobación al decidir.',next:'Comparar dos alternativas con criterios que sean importantes para ti.'},
+  'Información sobre el proceso de decisión': {desc:'Incertidumbre acerca de los pasos y criterios necesarios para elegir.',next:'Escribir tres pasos que necesitas conocer antes de tomar una decisión.'},
+  'Información sobre sí mismo': {desc:'Dudas acerca de intereses, capacidades percibidas y preferencias.',next:'Revisar tu Misión 0 y conversar sobre lo que te interesa explorar.'},
+  'Información sobre alternativas': {desc:'Falta de información sobre programas, oficios, requisitos u oportunidades.',next:'Consultar una fuente oficial sobre dos rutas educativas u ocupacionales.'},
+  'Información contradictoria': {desc:'Datos u opiniones que no coinciden acerca de capacidades o alternativas.',next:'Verificar la información en fuentes oficiales y anotar qué preguntas siguen abiertas.'},
+  'Conflictos internos': {desc:'Tensión entre varias preferencias, intereses o características de las opciones.',next:'Anotar qué valoras de cada opción y qué compromisos implicaría seguirla.'},
+  'Conflictos externos': {desc:'Desacuerdos o expectativas diferentes entre personas importantes para ti.',next:'Solicitar una conversación respetuosa con alguien de confianza, si así lo deseas.'}
+ }
+};
+function node(tag,cls,text){const el=document.createElement(tag);if(cls)el.className=cls;if(text!==undefined)el.textContent=text;return el;}
+function clear(el){el.replaceChildren();}
+function scoreText(d,test){return d.avg.toFixed(2).replace('.',',')+' / '+test.max;}
+function selectRanked(scores,n,reverse=false){
+ const sorted=[...scores].sort((a,b)=>(reverse?a.avg-b.avg:b.avg-a.avg)||a.index-b.index);
+ // Incluir empates en el puesto límite, si los hay.
+ const cutoff=sorted[Math.min(n,sorted.length)-1].avg;
+ return sorted.filter(d=>reverse?d.avg<=cutoff+1e-9:d.avg>=cutoff-1e-9);
+}
+function makeCard(title,description,dimensions,test,type){
+ const box=node('article','insight-card '+type);box.append(node('h3','',title),node('p','insight-intro',description));
+ const ul=node('ul','insight-list');
+ for(const d of dimensions){
+  const item=node('li');const heading=node('strong','',d.name+' · '+scoreText(d,test));
+  const detail=node('span','',ORIENTACIONES[app.type][d.name].desc);
+  item.append(heading,detail);ul.append(item);
+ }
+ box.append(ul);return box;
+}
+function showResults(){
+ const test=INSTRUMENTOS[app.type];if(app.answers.some(v=>!Number.isInteger(v)))return;
+ $('result-title').textContent='Resultados · '+test.title;
+ $('result-version').textContent=test.version;
+ $('report-date').textContent='Fecha: '+new Date().toLocaleDateString('es-CO',{year:'numeric',month:'long',day:'numeric'});
+ $('student-name').value='';$('student-code').value='';
+ const scores=test.groups.map((d,index)=>{const values=d.ids.map(i=>app.answers[i-1]);return {...d,index,avg:values.reduce((a,b)=>a+b,0)/values.length};});
+ const top=selectRanked(scores,app.type==='iami'?3:3);
+ const bottom=selectRanked(scores,2,true);
+ const flat=Math.max(...scores.map(d=>d.avg))-Math.min(...scores.map(d=>d.avg))<.5;
+ const notes=$('result-insights');clear(notes);
+ if(app.type==='iami'){
+  $('result-kind').textContent='ESTACIÓN 02 · MI AUTOEFICACIA PERCIBIDA';
+  $('result-headline').textContent='¿En qué actividades siento mayor confianza?';
+  $('result-summary').textContent=flat?'Tus puntuaciones de confianza son parecidas entre los ámbitos explorados. Son respuestas actuales, no una medida de tus capacidades reales.':'Tus respuestas permiten observar en qué actividades manifestaste mayor confianza y en cuáles expresaste relativamente menos confianza. Estas diferencias son solo dentro de tu propio perfil.';
+  notes.append(makeCard('Donde expresaste más confianza','Ámbitos relativamente destacados en tus propias respuestas. No son una evaluación objetiva de habilidades.',top,test,'confidence'));
+  if(!flat)notes.append(makeCard('Donde puedes seguir ganando confianza','Puntuaciones relativamente menores; no significan incapacidad ni falta de potencial.',bottom,test,'explore'));
+  $('chart-title').textContent='Tu mapa de confianza percibida';
+  $('chart-caption').textContent='Promedio de las seis respuestas de cada dimensión, en una escala de 1 a 10. No es un porcentaje de inteligencia ni una comparación con otras personas.';
+  const next=ORIENTACIONES.iami[bottom[0].name];
+  $('next-text').textContent='Puedes explorar una actividad que te interese y elegir algo nuevo que quieras practicar. Por ejemplo: '+next.next;
+  $('reflect-questions').replaceChildren(...['¿Qué actividades reconociste como familiares o interesantes para ti?','¿Qué aspecto quisieras practicar, incluso si hoy te sientes menos seguro/a?','¿Qué experiencia o persona podría ayudarte a ampliar tus posibilidades?'].map(v=>node('li','',v)));
+ }else{
+  $('result-kind').textContent='ESTACIÓN 03 · MI PROCESO DE DECISIÓN';
+  $('result-headline').textContent='¿Qué situaciones pueden dificultar mis decisiones?';
+  $('result-summary').textContent='En esta escala, un número mayor significa mayor identificación con la dificultad descrita; NO significa mejor desempeño. El gráfico corresponde a las ocho agrupaciones del anexo inicial de 27 preguntas, no a las seis escalas de la validación posterior.';
+  notes.append(makeCard('Situaciones con las que más te identificaste','Estos ámbitos aparecen relativamente más señalados en tus respuestas. No son un diagnóstico ni una clasificación del estudiante.',top,test,'attention'));
+  if(!flat)notes.append(makeCard('Situaciones con menor identificación','En comparación con tus otras respuestas, aquí marcaste relativamente menos identificación.',bottom,test,'neutral'));
+  $('chart-title').textContent='Tu mapa de dificultades percibidas';
+  $('chart-caption').textContent='Promedios descriptivos de las agrupaciones iniciales de 27 ítems, con respuestas de 1 a 7. Más alto = mayor identificación con la dificultad. No se aplican puntos de corte ni el modelo factorial posterior.';
+  $('next-text').textContent='Tal vez te ayude elegir un asunto que quieras aclarar, sin apresurar una decisión. Una idea para comenzar: '+ORIENTACIONES.dtdc[top[0].name].next;
+  $('reflect-questions').replaceChildren(...['¿Qué situación te genera más preguntas sobre tu futuro?','¿Qué información te hace falta sobre tus alternativas?','¿Con quién podrías hablar, si necesitas apoyo para decidir?'].map(v=>node('li','',v)));
+ }
+ const chart=$('result-bars');clear(chart);
+ for(const d of scores){
+  const wrapper=node('div','dimension');
+  const header=node('div','dimension-line');
+  const label=node('span','',d.name);
+  const number=node('span','',scoreText(d,test));header.append(label,number);
+  const bar=node('div','meter');bar.setAttribute('role','img');bar.setAttribute('aria-label',`${d.name}: ${scoreText(d,test)}`);
+  const fill=node('div','meter-fill '+(app.type==='dtdc'?'dtdc-fill':''));
+  // El mínimo de cada escala es 1, por eso el gráfico comienza en ese punto, no en cero.
+  fill.style.width=((d.avg-test.min)/(test.max-test.min)*100).toFixed(1)+'%';
+  bar.append(fill);wrapper.append(header,bar);chart.append(wrapper);
+ }
+ $('result-note').textContent=(app.type==='iami'?'Puntuaciones mayores indican más confianza percibida en las actividades de esa dimensión. ':'En DTDC, las puntuaciones mayores indican mayor identificación con las dificultades descritas; la dimensión «Motivación» NO mide un nivel de motivación. ')+test.note;
+ $('result-source').textContent='Fuente: '+test.source;
+ visible('results');
+}
+function exit(){if(app.answers.some(Number.isInteger)&&!confirm('¿Volver al inicio? Se perderán las respuestas y resultados de esta sesión.'))return;app.type=null;app.answers=[];app.page=0;visible('landing');}
+document.querySelectorAll('[data-start]').forEach(b=>b.addEventListener('click',()=>start(b.dataset.start)));
+$('back-button').addEventListener('click',()=>{if(app.page>0){app.page--;renderQuestions();window.scrollTo({top:0,behavior:'instant'});}});
+$('next-button').addEventListener('click',next);$('exit-button').addEventListener('click',exit);$('restart-button').addEventListener('click',exit);$('print-button').addEventListener('click',()=>window.print());
+
+</script>
 </body>
 </html>
